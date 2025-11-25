@@ -3,6 +3,7 @@ import { Noto_Sans_SC, Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { AuthProviderWrapper } from "@/components/auth-provider-wrapper";
 
 const notoSans = Noto_Sans_SC({
   subsets: ["latin"],
@@ -30,9 +31,11 @@ export default function RootLayout({
       <body
         className={`${notoSans.variable} ${inter.variable} bg-[#03070f] text-white antialiased`}
       >
-        <SiteHeader />
-        <main className="bg-[#03070f]">{children}</main>
-        <SiteFooter />
+        <AuthProviderWrapper>
+          <SiteHeader />
+          <main className="bg-[#03070f]">{children}</main>
+          <SiteFooter />
+        </AuthProviderWrapper>
       </body>
     </html>
   );
