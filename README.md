@@ -29,6 +29,19 @@ npm run start  # 生产环境启动
 npm run lint   # ESLint 检查（npx eslint .）
 ```
 
+### 部署
+
+**快速部署到 Vercel（推荐）**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suibinyu/ljm-site)
+
+1. 点击上方按钮，或访问 [Vercel](https://vercel.com)
+2. 使用 GitHub 登录，导入仓库 `suibinyu/ljm-site`
+3. 点击 Deploy，等待构建完成
+4. 获得生产 URL，每次推送自动部署
+
+详细部署指南请查看 [DEPLOY.md](./DEPLOY.md)
+
 ### 下一步建议
 1. 接入真实 CMS/API，替换 `src/data/siteData.ts` 中的静态数据。
 2. 新增门店/代理登录入口与质保录入流程（阶段二目标）。
