@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --background: #03070f;
+  --foreground: #f4f6fa;
+  --accent: #3ff0ff;
+  --secondary: #1ad6ff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-sans), "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 140px);
+}
+
+.section-container {
+  @apply mx-auto max-w-6xl px-6 py-16 sm:py-20;
+}
+
+.section-title {
+  @apply text-3xl font-semibold text-white;
+}
